@@ -191,7 +191,15 @@ class _ExperienceState extends State<Experience> {
                                           offset: const Offset(2, 4),
                                         ),
                                       ],
-                                      color: primary.shade100,
+                                      // color: primary.shade100,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topLeft,
+                                        end: Alignment.bottomRight,
+                                        colors: [
+                                          Color.fromARGB(255, 254, 211, 240),
+                                          Color.fromARGB(255, 255, 192, 194),
+                                        ],
+                                      ),
                                     ),
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 8, vertical: 4),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const Color primaryColor = Color(0xFFF4B4B4);
+const List<Color> gradientViolet = [Color(0xFFa18cd1), Color(0xFFfbc2eb)];
 
 const MaterialColor primary = MaterialColor(_primaryPrimaryValue, <int, Color>{
   50: Color(0xFFFEF6F6),
