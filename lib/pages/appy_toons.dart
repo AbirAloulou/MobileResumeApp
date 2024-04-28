@@ -46,6 +46,22 @@ class _AppyToonsState extends State<AppyToons> {
                   fontSize: 35,
                 ),
               ),
+              Text(
+                "The Founder & The Artist",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 30,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              Text(
+                "Of Appy Toons",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 30,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Text(
@@ -281,12 +297,9 @@ class _AppyToonsState extends State<AppyToons> {
                     fontSize: 35,
                     shadows: [
                       Shadow(
-                        color: Colors
-                            .white, // You can adjust the color and opacity here
-                        offset: Offset(2,
-                            4), // You can adjust the offset to control the shadow position
-                        blurRadius:
-                            2, // You can adjust the blur radius to control the blurriness of the shadow
+                        color: Colors.white,
+                        offset: Offset(2, 4),
+                        blurRadius: 2,
                       ),
                     ],
                   ),
