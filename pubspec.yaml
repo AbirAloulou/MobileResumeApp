@@ -46,6 +46,8 @@ flutter:
     - assets/appytoons/mdf/
     - assets/appytoons/paintings/
     - assets/appytoons/wallpapers/
+    - assets/tools/
+    - assets/screenshots/
 # fonts:
 #   family: PlayfairDisplay
 #   fonts:

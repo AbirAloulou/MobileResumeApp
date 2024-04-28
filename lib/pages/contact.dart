@@ -1,6 +1,10 @@
+import 'package:animated_emoji/animated_emoji.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import '../colors.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class Contact extends StatefulWidget {
   const Contact({super.key});
@@ -24,13 +28,13 @@ class _ContactState extends State<Contact> {
             Padding(
               padding: const EdgeInsets.all(10),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(right: 10, left: 10),
-                    child: Icon(
-                      Ionicons.footsteps,
-                      color: primary.shade900,
-                      size: 35,
+                    child: AnimatedEmoji(
+                      AnimatedEmojis.loveLetter,
+                      size: 50,
                     ),
                   ),
                   const Text(
@@ -75,69 +79,106 @@ class _ContactState extends State<Contact> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(5),
-                            child: Icon(
-                              Ionicons.logo_facebook,
-                              color: Colors.blue.shade900,
+                      child: ElevatedButton(
+                        onPressed: () async {
+                          Uri url = Uri.parse(
+                              "https://www.facebook.com/profile.php?id=100010894248826");
+
+                          if (await canLaunchUrl(url)) {
+                            await launchUrl(url);
+                          } else {
+                            throw 'Could not launch $url';
+                          }
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Icon(
+                                Ionicons.logo_facebook,
+                                color: Colors.blue.shade900,
+                              ),
                             ),
-                          ),
-                          Text(
-                            "Abir Aloulou",
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w400,
+                            Text(
+                              "Abir Aloulou",
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
-                          ),
-                          SizedBox(width: 20),
-                          Padding(
-                            padding: const EdgeInsets.all(5),
-                            child: Icon(
-                              Ionicons.logo_linkedin,
-                              color: Colors.blue.shade700,
-                            ),
-                          ),
-                          Text(
-                            "Abir Aloulou",
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          // Icon(
-                          //   Ionicons.logo_whatsapp,
-                          //   color: Colors.green,
-                          // ),
-                          // Text("+216 58 260 160")
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(5),
-                            child: Icon(
-                              Ionicons.logo_whatsapp,
-                              color: Colors.green,
+                      padding: const EdgeInsets.all(8.0),
+                      child: ElevatedButton(
+                        onPressed: () async {
+                          Uri url = Uri.parse(
+                              "https://www.linkedin.com/in/abir-aloulou-89949b1b1/");
+
+                          if (await canLaunchUrl(url)) {
+                            await launchUrl(url);
+                          } else {
+                            throw 'Could not launch $url';
+                          }
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Icon(
+                                Ionicons.logo_linkedin,
+                                color: Colors.blue.shade700,
+                              ),
                             ),
-                          ),
-                          Text(
-                            "+216 58 260 160",
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w400,
+                            Text(
+                              "Abir Aloulou",
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
-                          )
-                        ],
+                          ],
+                        ),
                       ),
-                    )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ElevatedButton(
+                        onPressed: () async {
+                          String phoneNumber = "+21658260160";
+                          String url = 'tel:$phoneNumber';
+
+                          if (await canLaunchUrl(Uri.parse(url))) {
+                            await launchUrl(Uri.parse(url));
+                          } else {
+                            throw 'Could not launch $url';
+                          }
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Icon(
+                                Ionicons.logo_whatsapp,
+                                color: Colors.green,
+                              ),
+                            ),
+                            Text(
+                              "+216 58 260 160",
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -229,8 +270,7 @@ class _ContactState extends State<Contact> {
                             backgroundColor: Colors.indigo[100],
                           ),
                           onPressed: () {
-                            _sendEmail(context, sender.text, subject.text,
-                                message.text);
+                            _sendEmail();
                           },
                           child: Text(
                             "Send",
@@ -249,9 +289,33 @@ class _ContactState extends State<Contact> {
     );
   }
 
-  Future _sendEmail(BuildContext context, String sender, String subject,
-      String message) async {
-    final url = Uri.parse("");
-    print(sender + subject + message);
+  Future _sendEmail() async {
+    String s = sender.text;
+    String m = message.text;
+    String sub = subject.text;
+    final url = Uri.parse("https://api.emailjs.com/api/v1.0/email/send");
+    const serviceId = "service_rpw0urb";
+    const templateId = "template_467ly1m";
+    const userId = "nsYNvTNafunXEPbA8";
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({
+        "service_id": serviceId,
+        "template_id": templateId,
+        "user_id": userId,
+        "template_params": {
+          "from_name": s,
+          "to_name": "Abir Aloulou",
+          "subject": sub,
+          "message": m
+        }
+      }),
+    );
+    sender.text = "";
+    message.text = "";
+    subject.text = "";
+
+    return response.statusCode;
   }
 }

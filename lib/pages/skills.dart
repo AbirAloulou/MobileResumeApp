@@ -1,3 +1,4 @@
+import 'package:animated_emoji/animated_emoji.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -29,10 +30,9 @@ class _SkillsState extends State<Skills> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(right: 10),
-                      child: Icon(
-                        Ionicons.barbell,
-                        color: primary.shade900,
-                        size: 35,
+                      child: AnimatedEmoji(
+                        AnimatedEmojis.armMechanical,
+                        size: 50,
                       ),
                     ),
                     const Text(

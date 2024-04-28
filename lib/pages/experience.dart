@@ -1,3 +1,4 @@
+import 'package:animated_emoji/animated_emoji.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import '../colors.dart';
@@ -25,10 +26,9 @@ class _ExperienceState extends State<Experience> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 10, left: 10),
-                  child: Icon(
-                    Ionicons.footsteps,
-                    color: primary.shade900,
-                    size: 35,
+                  child: AnimatedEmoji(
+                    AnimatedEmojis.lightBulb,
+                    size: 50,
                   ),
                 ),
                 const Text(

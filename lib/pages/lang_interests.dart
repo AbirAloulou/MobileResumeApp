@@ -1,3 +1,4 @@
+import 'package:animated_emoji/animated_emoji.dart';
 import 'package:flutter/material.dart';
 import 'package:country_flags/country_flags.dart';
 import 'package:ionicons/ionicons.dart';
@@ -30,10 +31,9 @@ class _LangIntState extends State<LangInt> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(right: 10, left: 10),
-                        child: Icon(
-                          Ionicons.language,
-                          color: primary.shade900,
-                          size: 35,
+                        child: AnimatedEmoji(
+                          AnimatedEmojis.nerdFace,
+                          size: 50,
                         ),
                       ),
                       const Text(
@@ -49,7 +49,8 @@ class _LangIntState extends State<LangInt> {
                 ),
                 Center(
                   child: Container(
-                    margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                    margin:
+                        const EdgeInsets.only(left: 20, right: 20, bottom: 20),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15.0),
@@ -82,8 +83,7 @@ class _LangIntState extends State<LangInt> {
                                   borderRadius: 8,
                                 ),
                                 const Padding(
-                                  padding: EdgeInsets.only(
-                                      left: 10, right: 10),
+                                  padding: EdgeInsets.only(left: 10, right: 10),
                                   child: Text(
                                     "Arabic",
                                     style: TextStyle(
@@ -162,10 +162,9 @@ class _LangIntState extends State<LangInt> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(right: 10, left: 10),
-                        child: Icon(
-                          Ionicons.heart,
-                          color: primary.shade900,
-                          size: 35,
+                        child: AnimatedEmoji(
+                          AnimatedEmojis.heartGrow,
+                          size: 50,
                         ),
                       ),
                       const Text(
@@ -181,7 +180,8 @@ class _LangIntState extends State<LangInt> {
                 ),
                 Center(
                   child: Container(
-                    margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                    margin:
+                        const EdgeInsets.only(left: 20, right: 20, bottom: 20),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15.0),

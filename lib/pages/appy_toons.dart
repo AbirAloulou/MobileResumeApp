@@ -2,6 +2,7 @@ import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_devicon/flutter_devicon.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../colors.dart';
 import 'config/global.params.dart';
 
@@ -89,7 +90,7 @@ class _AppyToonsState extends State<AppyToons> {
                 padding: const EdgeInsets.only(
                     top: 15, right: 20, left: 20, bottom: 20),
                 child: Container(
-                  height: 230,
+                  height: 250,
                   decoration: BoxDecoration(
                     color: Colors.white70,
                     borderRadius: BorderRadius.circular(15.0),
@@ -169,25 +170,37 @@ class _AppyToonsState extends State<AppyToons> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: Icon(
-                                Ionicons.logo_instagram,
-                                color: primary.shade900,
+                        padding: const EdgeInsets.all(8),
+                        child: ElevatedButton(
+                          onPressed: () async {
+                            Uri url = Uri.parse(
+                                "https://www.instagram.com/appy.toons/");
+
+                            if (await canLaunchUrl(url)) {
+                              await launchUrl(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(5),
+                                child: Icon(
+                                  Ionicons.logo_instagram,
+                                  color: primary.shade900,
+                                ),
                               ),
-                            ),
-                            Text(
-                              "appy.toons",
-                              style: TextStyle(
+                              Text(
+                                "appy.toons",
+                                style: TextStyle(
+                                  fontSize: 17,
                                   fontWeight: FontWeight.w400,
-                                  fontSize: 15,
-                                  color: Colors.grey[600]),
-                            ),
-                          ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],

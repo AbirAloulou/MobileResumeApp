@@ -727,4 +727,104 @@ class GlobalParams {
       ]
     },
   ];
+
+  static List<Map<String, dynamic>> projects = [
+    {
+      "title": "Mammy Restaurant",
+      "description": "A web application for a restaurant.",
+      "github": "https://github.com/AbirAloulou/Restaurant-management-system",
+      "tools": [
+        {
+          "name": "Laravel",
+          "image": "assets/tools/laravel.png",
+        },
+        {
+          "name": "VueJs",
+          "image": "assets/tools/vuejs.png",
+        },
+        {
+          "name": "Bootstrap 5",
+          "image": "assets/tools/bootstrap.png",
+        },
+        {
+          "name": "Visual Studio Code",
+          "image": "assets/tools/vscode.jpg",
+        },
+        {
+          "name": "Thunder Client",
+          "image": "assets/tools/thundercli.png",
+        },
+        {
+          "name": "Cloudinary",
+          "image": "assets/tools/cloudinary.png",
+        },
+        {
+          "name": "Xampp",
+          "image": "assets/tools/xampp.png",
+        },
+      ],
+      "images": [
+        {"image": "assets/screenshots/mamy1.png"},
+        {"image": "assets/screenshots/mamy2.png"},
+        {"image": "assets/screenshots/mamy3.png"},
+        {"image": "assets/screenshots/mamy4.png"},
+        {"image": "assets/screenshots/mamy5.png"},
+        {"image": "assets/screenshots/mamy6.png"},
+        {"image": "assets/screenshots/mamy7.png"},
+      ]
+    },
+    {
+      "title": "Echri Tounsi",
+      "description":
+          "An ecommerce web application to buy unique and traditional tunisian products.",
+      "github": "https://github.com/AminKaammoun/Echri-Tounsi",
+      "tools": [
+        {
+          "name": "PHP",
+          "image": "assets/tools/php.png",
+        },
+        {
+          "name": "HTML 5 & CSS 3",
+          "image": "assets/tools/htmlcss.jpg",
+        },
+        {
+          "name": "Visual Studio Code",
+          "image": "assets/tools/vscode.jpg",
+        },
+        {
+          "name": "Xampp",
+          "image": "assets/tools/xampp.png",
+        },
+      ],
+      "images": [
+        {"image": "assets/screenshots/echriTn1.png"},
+        {"image": "assets/screenshots/echriTn2.png"},
+        {"image": "assets/screenshots/echriTn3.png"},
+        {"image": "assets/screenshots/echriTn4.png"},
+        {"image": "assets/screenshots/echriTn5.png"},
+      ]
+    },
+    {
+      "title": "To Do List",
+      "description": "A to do list mobile application.",
+      "github": "https://github.com/AbirAloulou/to-do-list---mobile-app",
+      "tools": [
+        {
+          "name": "Dart",
+          "image": "assets/tools/dart.png",
+        },
+        {
+          "name": "Flutter",
+          "image": "assets/tools/flutter.png",
+        },
+        {
+          "name": "Visual Studio Code",
+          "image": "assets/tools/vscode.jpg",
+        },
+      ],
+      "images": [
+        {"image": "assets/screenshots/todo.jpg"},
+      ]
+    },
+  ];
 }

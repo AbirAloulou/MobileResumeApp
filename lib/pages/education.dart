@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:animated_emoji/emoji.dart';
+import 'package:animated_emoji/emojis.g.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -26,10 +28,10 @@ class _EducationState extends State<Education> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(right: 10, left: 10),
-                    child: Icon(
-                      Ionicons.book,
-                      color: primary.shade900,
-                      size: 35,
+                    child: AnimatedEmoji(
+                      AnimatedEmojis.graduationCap,
+                      size: 50,
+                      repeat: false,
                     ),
                   ),
                   const Text(
