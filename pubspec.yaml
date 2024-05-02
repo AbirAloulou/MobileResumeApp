@@ -26,6 +26,8 @@ dependencies:
   pdfx: ^2.6.0
   animated_emoji: ^3.1.0
   flutter_gradient_colors: ^2.1.1
+  provider: any
+  reactive_theme: ^2.1.0
 
 dev_dependencies:
   flutter_test:
