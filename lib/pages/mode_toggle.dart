@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/theme.dart';
-import '../colors.dart';
 import '../theme_provider.dart';
 
 class ModeToggle extends StatefulWidget {

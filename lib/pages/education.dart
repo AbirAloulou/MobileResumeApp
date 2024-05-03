@@ -1,13 +1,9 @@
 import 'dart:ui';
-
 import 'package:animated_emoji/emoji.dart';
 import 'package:animated_emoji/emojis.g.dart';
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/theme_provider.dart';
-
-import '../colors.dart';
 
 class Education extends StatefulWidget {
   const Education({super.key});

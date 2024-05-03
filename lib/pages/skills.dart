@@ -1,10 +1,8 @@
 import 'package:animated_emoji/animated_emoji.dart';
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/theme_provider.dart';
 
-import '../colors.dart';
 import 'config/global.params.dart';
 
 class Skills extends StatefulWidget {

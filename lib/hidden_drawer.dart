@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
-import 'package:ionicons/ionicons.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/colors.dart';
 import 'package:resume_app/pages/about_me.dart';
@@ -8,7 +7,6 @@ import 'package:resume_app/pages/home_page.dart';
 import 'package:resume_app/pages/lang_interests.dart';
 import 'package:resume_app/pages/mode_toggle.dart';
 import 'package:resume_app/pages/skills.dart';
-
 import 'pages/Contact.dart';
 import 'pages/Education.dart';
 import 'pages/appy_toons.dart';

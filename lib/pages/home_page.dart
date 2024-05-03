@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:rive/rive.dart';
 import 'package:resume_app/theme_provider.dart';
 
 class HomePage extends StatefulWidget {
