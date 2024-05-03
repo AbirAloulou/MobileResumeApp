@@ -2,8 +2,8 @@ import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:provider/provider.dart';
+import 'package:resume_app/pages/maps.dart';
 import 'package:resume_app/theme_provider.dart';
-
 import '../colors.dart';
 
 class AboutMe extends StatefulWidget {
@@ -91,32 +91,62 @@ class _AboutMeState extends State<AboutMe> {
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15, bottom: 15),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              // Icon(
-                              //   Icons.tag,
-                              //   color: primary.shade900,
-                              // ),
-                              Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: CountryFlag.fromCountryCode(
-                                  'TN',
-                                  height: 20,
-                                  width: 30,
-                                  borderRadius: 5,
+                        GestureDetector(
+                          onTap: () {
+                            _getMaps(context, themeProvider);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 15, bottom: 15),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: CountryFlag.fromCountryCode(
+                                    'TN',
+                                    height: 20,
+                                    width: 30,
+                                    borderRadius: 5,
+                                  ),
                                 ),
-                              ),
-                              Text("Based in Sfax, Tunisia",
+                                Text(
+                                  "Based in Sfax, Tunisia",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 15,
-                                      color: Colors.grey[600])),
-                            ],
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 15,
+                                    color: Colors.grey[600],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
+                        // Padding(
+                        //   padding: const EdgeInsets.only(top: 15, bottom: 15),
+                        //   child: Row(
+                        //     mainAxisAlignment: MainAxisAlignment.center,
+                        //     children: [
+                        //       // Icon(
+                        //       //   Icons.tag,
+                        //       //   color: primary.shade900,
+                        //       // ),
+                        //       Padding(
+                        //         padding: const EdgeInsets.all(5.0),
+                        //         child: CountryFlag.fromCountryCode(
+                        //           'TN',
+                        //           height: 20,
+                        //           width: 30,
+                        //           borderRadius: 5,
+                        //         ),
+                        //       ),
+                        //       Text("Based in Sfax, Tunisia",
+                        //           style: TextStyle(
+                        //               fontWeight: FontWeight.w400,
+                        //               fontSize: 15,
+                        //               color: Colors.grey[600])),
+                        //     ],
+                        //   ),
+                        // ),
                         //google maps thing
                         // Padding(
                         //   padding: const EdgeInsets.only(bottom: 15),
@@ -248,5 +278,10 @@ class _AboutMeState extends State<AboutMe> {
         );
       },
     );
+  }
+
+  void _getMaps(BuildContext context, ThemeProvider themeProvider) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => MapsPage()));
   }
 }
