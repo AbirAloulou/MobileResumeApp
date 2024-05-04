@@ -1,0 +1,390 @@
+{
+  "language": "English",
+  "@language": {
+    "description": "The current language"
+  },
+  "aboutME": "About Me",
+  "@aboutME": {
+    "description": "The current language"
+  },
+  "helloIam": "Hello, I am",
+  "@helloIam": {
+    "description": "The current language"
+  },
+  "aComputerEngineer": "a Computer Engineer",
+  "@aComputerEngineer": {
+    "description": "The current language"
+  },
+  "yourFavArtist": "your favorite Artist",
+  "@yourFavArtist": {
+    "description": "The current language"
+  },
+  "comEng": "Computer Engineer",
+  "@comEng": {
+    "description": "The current language"
+  },
+  "artist": "& Artist",
+  "@artist": {
+    "description": "The current language"
+  },
+  "sfaxTn": "Based in Sfax, Tunisia",
+  "@sfaxTn": {
+    "description": "The current language"
+  },
+  "aboutme": "ABOUT ME",
+  "@aboutme": {
+    "description": "The current language"
+  },
+  "iam": "I'm",
+  "@iam": {
+    "description": "The current language"
+  },
+  "passionate": "a passionate",
+  "@passionate": {
+    "description": "The current language"
+  },
+  "CompEngStud": "Computer Engineering student",
+  "@CompEngStud": {
+    "description": "The current language"
+  },
+  "des": " at the IIT, who is immersing herself in the realm of technology, innovation and creativity. \n\nCoding isn't just a skill for me; it's a form of expression, a way to bring conceptual ideas to life. I also enjoy creating web prototypes that combine artistry and functionality.",
+  "@des": {
+    "description": "The current language"
+  },
+  "desc": "\n\nAlongside my academic pursuits, I'm ",
+  "@desc": {
+    "description": "The current language"
+  },
+  "prodOwner": "the proud owner ",
+  "@prodOwner": {
+    "description": "The current language"
+  },
+  "descr": "\" a venture where I blend my technical expertise with my love for art. Through vibrant illustrations and paintings, I aim to bring joy and humor into people's lives. \n\nAs an eternal learner, I enjoy discovering new skills and pushing the boundaries of what's possible. Join me on this journey of exploration and creation!",
+  "@descr": {
+    "description": "The current language"
+  },
+  "langInt": "LANGUAGES",
+  "@langInt": {
+    "description": "The current language"
+  },
+  "ar": "Arabic",
+  "@ar": {
+    "description": "The current language"
+  },
+  "fr": "French",
+  "@fr": {
+    "description": "The current language"
+  },
+  "en": "English",
+  "@en": {
+    "description": "The current language"
+  },
+  "interests": "INTERESTS",
+  "@interests": {
+    "description": "The current language"
+  },
+  "paint": "Painting",
+  "@paint": {
+    "description": "The current language"
+  },
+  "vidGames": "Video Games",
+  "@vidGames": {
+    "description": "The current language"
+  },
+  "digArt": "Digital Art",
+  "@digArt": {
+    "description": "The current language"
+  },
+  "skills": "SKILLS",
+  "@skills": {
+    "description": "The current language"
+  },
+  "skills2": "Skills",
+  "@skills2": {
+    "description": "The current language"
+  },
+  "proglang": "Programming Languages \n& Framework",
+  "@proglang": {
+    "description": "The current language"
+  },
+  "sgbd": "SGBD: \nDatabase Management System",
+  "@sgbd": {
+    "description": "The current language"
+  },
+  "diagrams": "Conceptual Diagrams",
+  "@diagrams": {
+    "description": "The current language"
+  },
+  "prototype": "Web Design - Prototypes",
+  "@prototype": {
+    "description": "The current language"
+  },
+  "digart": "Digital Art",
+  "@digart": {
+    "description": "The current language"
+  },
+  "businessIntelligence": "Business Intelligence",
+  "@businessIntelligence": {
+    "description": "The current language"
+  },
+  "edu": "EDUCATION",
+  "@edu": {
+    "description": "The current language"
+  },
+  "engDeg": "Engineering Degree",
+  "@engDeg": {
+    "description": "The current language"
+  },
+  "softEng": "Software Engineering",
+  "@softEng": {
+    "description": "The current language"
+  },
+  "&busInt": "& Business Intelligence",
+  "@&busInt": {
+    "description": "The current language"
+  },
+  "iit": "International Institute of Technology",
+  "@iit": {
+    "description": "The current language"
+  },
+  "now": "2022 - Now ",
+  "@now": {
+    "description": "The current language"
+  },
+  "bachDeg": "Bachelor's Degree",
+  "@bachDeg": {
+    "description": "The current language"
+  },
+  "compSci": "Computer Science in",
+  "@compSci": {
+    "description": "The current language"
+  },
+  "dataAnBigData": "Data Analysis & Big Data",
+  "@dataAnBigData": {
+    "description": "The current language"
+  },
+  "ISIM": "Higher Institute of Computer Science",
+  "@ISIM": {
+    "description": "The current language"
+  },
+  "ISIMs": "and Multimedia of Sfax",
+  "@ISIMs": {
+    "description": "The current language"
+  },
+  "baccDeg": "Baccalaureate Degree",
+  "@baccDeg": {
+    "description": "The current language"
+  },
+  "maths": "Mathematics",
+  "@maths": {
+    "description": "The current language"
+  },
+  "highSchool": "High School",
+  "@highSchool": {
+    "description": "The current language"
+  },
+  "projects": "Projects",
+  "@projects": {
+    "description": "The current language"
+  },
+  "experience": "Experience",
+  "@experience": {
+    "description": "The current language"
+  },
+  "title1": "Intern as a Graphic Designer",
+  "@title1": {
+    "description": "The current language"
+  },
+  "period1": "August 2021",
+  "@period1": {
+    "description": "The current language"
+  },
+  "project1": "Participation in the organization of professional events at Teamwill.",
+  "@project1": {
+    "description": "The current language"
+  },
+  "task10": "Contributing to the organization of professional events.",
+  "@task10": {
+    "description": "The current language"
+  },
+  "task11": "Participating in event preparation meetings.",
+  "@task11": {
+    "description": "The current language"
+  },
+  "task12": "Developing proposals in meetings.",
+  "@task12": {
+    "description": "The current language"
+  },
+  "task13": "Designing conception.",
+  "@task13": {
+    "description": "The current language"
+  },
+  "task14": "Preparing illustrations.",
+  "@task14": {
+    "description": "The current language"
+  },
+  "task15": "Creating posts to publish on social networks.",
+  "@task15": {
+    "description": "The current language"
+  },
+  "title2": "Intern in Research and Development",
+  "@title2": {
+    "description": "The current language"
+  },
+  "period2": "August 2022",
+  "@period2": {
+    "description": "The current language"
+  },
+  "project2": "Development of a decision making method in the case of a supermarket, based on the Apriori algorithm method and the Profset model.",
+  "@project2": {
+    "description": "The current language"
+  },
+  "task20": "Studying of the different decision making methods in the case of a supermarket previously published.",
+  "@task20": {
+    "description": "The current language"
+  },
+  "task21": "Analyzing the article 'Analysis Of Shopping Cart In Retail Companies Using Apriori Algorithm and Model Profset'proposed by Permatasari et al.",
+  "@task21": {
+    "description": "The current language"
+  },
+  "task22": "Developing the proposed method which is based on the Apriori Algorithm and Model Profset using Python.",
+  "@task22": {
+    "description": "The current language"
+  },
+  "title3": "Intern as a Data analyst",
+  "@title3": {
+    "description": "The current language"
+  },
+  "period3": "March 2022 - May 2022",
+  "@period3": {
+    "description": "The current language"
+  },
+  "project3": "Analysis of user profiling and behavioral data in the medical sector.",
+  "@project3": {
+    "description": "The current language"
+  },
+  "task30": "Studying the company needs.",
+  "@task30": {
+    "description": "The current language"
+  },
+  "task31": "Collecting data from Facebook Groups.",
+  "@task31": {
+    "description": "The current language"
+  },
+  "task32": "Transforming the collected data into useful information.",
+  "@task32": {
+    "description": "The current language"
+  },
+  "task33": "Loading the results in a data warehouse.",
+  "@task33": {
+    "description": "The current language"
+  },
+  "task34": "Visualizing the results in a dashboard.",
+  "@task34": {
+    "description": "The current language"
+  },
+  "title4": "Intern as a Web Developer",
+  "@title4": {
+    "description": "The current language"
+  },
+  "period4": "July 2023 - August 2023",
+  "@period4": {
+    "description": "The current language"
+  },
+  "project4": "Interviews Management Application.",
+  "@project4": {
+    "description": "The current language"
+  },
+  "task40": "Studying the company needs.",
+  "@task40": {
+    "description": "The current language"
+  },
+  "task41": "Creating a prototype.",
+  "@task41": {
+    "description": "The current language"
+  },
+  "task42": "Developping the needed interfaces",
+  "@task42": {
+    "description": "The current language"
+  },
+  "title5": "Founder & Business Owner",
+  "@title5": {
+    "description": "The current language"
+  },
+  "period5": "October 2020 - Now",
+  "@period5": {
+    "description": "The current language"
+  },
+  "project5": "The creation of art.",
+  "@project5": {
+    "description": "The current language"
+  },
+  "task50": "Creating arts",
+  "@task50": {
+    "description": "The current language"
+  },
+  "task51": "Being responsible of the whole business.",
+  "@task51": {
+    "description": "The current language"
+  },
+  "founderArtist": "The Founder & The Artist",
+  "@founderArtist": {
+    "description": "The current language"
+  },
+  "appytn": "Of Appy Toons",
+  "@appytn": {
+    "description": "The current language"
+  },
+  "swipe": "swipe right for more >>",
+  "@swipe": {
+    "description": "The current language"
+  },
+  "unique": "One-of-a-kind artistic products",
+  "@unique": {
+    "description": "The current language"
+  },
+  "so": "So,",
+  "@so": {
+    "description": "The current language"
+  },
+  "descappytn": " is a small business that specializes in creating unique and creative digital art, paintings, stickers, and prints. Their passion for art and design shines through in every piece they create, making their products perfect for anyone looking to add some personality and flair to their home, office, or personal belongings.",
+  "@descappytn": {
+    "description": "The current language"
+  },
+  "museum": "M U S E U M",
+  "@museum": {
+    "description": "The current language"
+  },
+  "moody": "Moody the responsible rabbit",
+  "@moody": {
+    "description": "The current language"
+  },
+  "wallpapers": "Wallpapers",
+  "@wallpapers": {
+    "description": "The current language"
+  },
+  "contact": "CONTACT ME",
+  "@contact": {
+    "description": "The current language"
+  },
+  "socMed": "Social Media",
+  "@socMed": {
+    "description": "The current language"
+  },
+  "theme": "Theme Mode",
+  "@theme": {
+    "description": "The current language"
+  },
+  "lightMode": "Light Mode",
+  "@lightMode": {
+    "description": "The current language"
+  },
+  "darkMode": "Dark Mode",
+  "@darkMode": {
+    "description": "The current language"
+  },
+  "tapSwitch": "tap to switch",
+  "@tapSwitch": {
+    "description": "The current language"
+  }
+}

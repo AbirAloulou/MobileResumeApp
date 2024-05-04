@@ -38,7 +38,7 @@ class _ModeToggleState extends State<ModeToggle> {
                 Text(
                   Provider.of<ThemeProvider>(context).themeData == lightMode
                       ? 'Light Mode'
-                      : 'Black Mode',
+                      : 'Dark Mode',
                   style: TextStyle(
                     color: Provider.of<ThemeProvider>(context).themeData ==
                             lightMode

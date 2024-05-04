@@ -305,7 +305,7 @@ class GlobalParams {
   static List<Map<String, dynamic>> experiences = [
     {
       "title": "Intern as a Graphic Designer",
-      "period": "August 2022",
+      "period": "August 2021",
       "company": {
         "name": "TeamWill Consulting Tunisia",
         "logo": "assets/logo_teamwill.png",
@@ -346,7 +346,7 @@ class GlobalParams {
     },
     {
       "title": "Intern in Research and Development",
-      "period": "August 2021",
+      "period": "August 2022",
       "company": {
         "name": "RunWay Tek",
         "logo": "assets/RunWayTek_logo.png",
