@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:resume_app/hidden_drawer.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/theme_provider.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:resume_app/l10n/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   runApp(
@@ -12,8 +15,23 @@ void main() {
   );
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
+  static _MainAppState? of(BuildContext context) =>
+      context.findAncestorStateOfType<_MainAppState>();
   const MainApp({super.key});
+
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  Locale _locale = Locale('en');
+  void setLocale(Locale value) {
+    setState(() {
+      _locale = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<ThemeProvider>(
@@ -22,17 +40,16 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           home: HiddenDrawer(),
           theme: themeProvider.themeData,
+          supportedLocales: L10n.all,
+          // locale: const Locale('en'),
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
         );
       },
     );
   }
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return const MaterialApp(
-  //     debugShowCheckedModeBanner: false,
-  //     home: HiddenDrawer(),
-  //     theme: Provider.of<ThemeProvider>(context).themeData,
-  //   );
-  // }
 }

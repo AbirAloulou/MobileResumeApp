@@ -1,4 +1,8 @@
 {
+  "lan": "Language",
+  "@lan": {
+    "description": "The current language"
+  },
   "language": "English",
   "@language": {
     "description": "The current language"
@@ -23,7 +27,7 @@
   "@comEng": {
     "description": "The current language"
   },
-  "artist": "& Artist",
+  "artist": "et Artist",
   "@artist": {
     "description": "The current language"
   },
@@ -43,8 +47,8 @@
   "@passionate": {
     "description": "The current language"
   },
-  "CompEngStud": "Computer Engineering student",
-  "@CompEngStud": {
+  "compengstd": "Computer Engineering student",
+  "@compengstd": {
     "description": "The current language"
   },
   "des": " at the IIT, who is immersing herself in the realm of technology, innovation and creativity. \n\nCoding isn't just a skill for me; it's a form of expression, a way to bring conceptual ideas to life. I also enjoy creating web prototypes that combine artistry and functionality.",
@@ -57,6 +61,10 @@
   },
   "prodOwner": "the proud owner ",
   "@prodOwner": {
+    "description": "The current language"
+  },
+  "ofAt": "of \"",
+  "@ofAt": {
     "description": "The current language"
   },
   "descr": "\" a venture where I blend my technical expertise with my love for art. Through vibrant illustrations and paintings, I aim to bring joy and humor into people's lives. \n\nAs an eternal learner, I enjoy discovering new skills and pushing the boundaries of what's possible. Join me on this journey of exploration and creation!",
@@ -139,8 +147,8 @@
   "@softEng": {
     "description": "The current language"
   },
-  "&busInt": "& Business Intelligence",
-  "@&busInt": {
+  "busInt": "& Business Intelligence",
+  "@busInt": {
     "description": "The current language"
   },
   "iit": "International Institute of Technology",
@@ -163,12 +171,12 @@
   "@dataAnBigData": {
     "description": "The current language"
   },
-  "ISIM": "Higher Institute of Computer Science",
-  "@ISIM": {
+  "isIM": "Higher Institute of Computer Science",
+  "@isIM": {
     "description": "The current language"
   },
-  "ISIMs": "and Multimedia of Sfax",
-  "@ISIMs": {
+  "isIMs": "and Multimedia of Sfax",
+  "@isIMs": {
     "description": "The current language"
   },
   "baccDeg": "Baccalaureate Degree",

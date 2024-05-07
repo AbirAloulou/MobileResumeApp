@@ -33,6 +33,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl:
+  # localization_i18n_arb:
+  # flutter_gen:
 
 dev_dependencies:
   flutter_test:
@@ -40,8 +42,8 @@ dev_dependencies:
   flutter_lints: ^3.0.2
 
 flutter:
-  uses-material-design: true
   generate: true
+  uses-material-design: true
   assets:
     - assets/
     - assets/me.jpg
