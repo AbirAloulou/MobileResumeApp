@@ -6,6 +6,9 @@ import 'package:resume_app/theme_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../theme.dart';
 
 class Contact extends StatefulWidget {
   const Contact({super.key});
@@ -21,6 +24,7 @@ class _ContactState extends State<Contact> {
 
   @override
   Widget build(BuildContext context) {
+    final currentLocale = Localizations.localeOf(context);
     return Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
       return Scaffold(
         backgroundColor: themeProvider.themeData.colorScheme.background,
@@ -39,8 +43,8 @@ class _ContactState extends State<Contact> {
                         size: 50,
                       ),
                     ),
-                    const Text(
-                      "CONTACT ME",
+                    Text(
+                      AppLocalizations.of(context)!.contact,
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
@@ -51,7 +55,7 @@ class _ContactState extends State<Contact> {
                 ),
               ),
               Text(
-                "Social Media",
+                AppLocalizations.of(context)!.socMed,
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: 20,
@@ -83,8 +87,12 @@ class _ContactState extends State<Contact> {
                         padding: const EdgeInsets.all(8.0),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                                themeProvider.themeData.colorScheme.background,
+                            backgroundColor: Provider.of<ThemeProvider>(context)
+                                        .themeData ==
+                                    lightMode
+                                ? themeProvider
+                                    .themeData.colorScheme.primaryContainer
+                                : themeProvider.themeData.colorScheme.secondary,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
@@ -106,7 +114,11 @@ class _ContactState extends State<Contact> {
                                 padding: const EdgeInsets.all(5),
                                 child: Icon(
                                   Ionicons.logo_facebook,
-                                  color: Colors.blue.shade900,
+                                  color: Provider.of<ThemeProvider>(context)
+                                              .themeData ==
+                                          lightMode
+                                      ? Colors.blue.shade900
+                                      : Colors.white,
                                 ),
                               ),
                               Text(
@@ -114,7 +126,11 @@ class _ContactState extends State<Contact> {
                                 style: TextStyle(
                                   fontSize: 17,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.black,
+                                  color: Provider.of<ThemeProvider>(context)
+                                              .themeData ==
+                                          lightMode
+                                      ? Colors.black
+                                      : Colors.white,
                                 ),
                               ),
                             ],
@@ -125,8 +141,12 @@ class _ContactState extends State<Contact> {
                         padding: const EdgeInsets.all(8.0),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                                themeProvider.themeData.colorScheme.background,
+                            backgroundColor: Provider.of<ThemeProvider>(context)
+                                        .themeData ==
+                                    lightMode
+                                ? themeProvider
+                                    .themeData.colorScheme.primaryContainer
+                                : themeProvider.themeData.colorScheme.secondary,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
@@ -148,7 +168,11 @@ class _ContactState extends State<Contact> {
                                 padding: const EdgeInsets.all(5),
                                 child: Icon(
                                   Ionicons.logo_linkedin,
-                                  color: Colors.blue.shade700,
+                                  color: Provider.of<ThemeProvider>(context)
+                                              .themeData ==
+                                          lightMode
+                                      ? Colors.blue.shade700
+                                      : Colors.white,
                                 ),
                               ),
                               Text(
@@ -156,7 +180,11 @@ class _ContactState extends State<Contact> {
                                 style: TextStyle(
                                   fontSize: 17,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.black,
+                                  color: Provider.of<ThemeProvider>(context)
+                                              .themeData ==
+                                          lightMode
+                                      ? Colors.black
+                                      : Colors.white,
                                 ),
                               ),
                             ],
@@ -167,8 +195,12 @@ class _ContactState extends State<Contact> {
                         padding: const EdgeInsets.all(8.0),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                                themeProvider.themeData.colorScheme.background,
+                            backgroundColor: Provider.of<ThemeProvider>(context)
+                                        .themeData ==
+                                    lightMode
+                                ? themeProvider
+                                    .themeData.colorScheme.primaryContainer
+                                : themeProvider.themeData.colorScheme.secondary,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
@@ -190,7 +222,11 @@ class _ContactState extends State<Contact> {
                                 padding: const EdgeInsets.all(5),
                                 child: Icon(
                                   Ionicons.logo_whatsapp,
-                                  color: Colors.green,
+                                  color: Provider.of<ThemeProvider>(context)
+                                              .themeData ==
+                                          lightMode
+                                      ? Colors.green
+                                      : Colors.white,
                                 ),
                               ),
                               Text(
@@ -198,7 +234,11 @@ class _ContactState extends State<Contact> {
                                 style: TextStyle(
                                   fontSize: 17,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.black,
+                                  color: Provider.of<ThemeProvider>(context)
+                                              .themeData ==
+                                          lightMode
+                                      ? Colors.black
+                                      : Colors.white,
                                 ),
                               ),
                             ],

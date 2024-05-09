@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/theme_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -26,11 +27,12 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: themeProvider.themeData.colorScheme.background,
           body: Column(
             mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 100),
                 child: Text(
-                  "Hello, I am",
+                  AppLocalizations.of(context)!.helloIam,
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 35,
@@ -44,14 +46,16 @@ class _HomePageState extends State<HomePage> {
                   fontSize: 35,
                 ),
               ),
-              Text(
-                this.image == "assets/code.png"
-                    ? "a Computer Engineer"
-                    : "your favorite Artist",
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 35,
-                  fontStyle: FontStyle.italic,
+              Center(
+                child: Text(
+                  this.image == "assets/code.png"
+                      ? AppLocalizations.of(context)!.aComputerEngineer
+                      : AppLocalizations.of(context)!.yourFavArtist,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 35,
+                    fontStyle: FontStyle.italic,
+                  ),
                 ),
               ),
               Expanded(

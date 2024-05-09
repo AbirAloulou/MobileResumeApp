@@ -2,7 +2,7 @@ import 'package:animated_emoji/animated_emoji.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/theme_provider.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'config/global.params.dart';
 
 class Skills extends StatefulWidget {
@@ -15,6 +15,7 @@ class Skills extends StatefulWidget {
 class _SkillsState extends State<Skills> {
   @override
   Widget build(BuildContext context) {
+    final currentLocale = Localizations.localeOf(context);
     return Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
       return Scaffold(
         backgroundColor: themeProvider.themeData.colorScheme.background,
@@ -36,8 +37,8 @@ class _SkillsState extends State<Skills> {
                           size: 50,
                         ),
                       ),
-                      const Text(
-                        "SKILLS",
+                      Text(
+                        AppLocalizations.of(context)!.skills,
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
                           fontSize: 20,
@@ -82,7 +83,10 @@ class _SkillsState extends State<Skills> {
                                     Padding(
                                       padding: const EdgeInsets.only(left: 8),
                                       child: Text(
-                                        '${item['title']}',
+                                        currentLocale.languageCode == 'en'
+                                            ? '${item['titleEn']}'
+                                            : '${item['titleFr']}',
+                                        // '${item['title']}',
                                         style: const TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 15,

@@ -4,7 +4,7 @@ import 'package:ionicons/ionicons.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/theme_provider.dart';
 import '../colors.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'config/global.params.dart';
 
 class Experience extends StatefulWidget {
@@ -17,6 +17,7 @@ class Experience extends StatefulWidget {
 class _ExperienceState extends State<Experience> {
   @override
   Widget build(BuildContext context) {
+    final currentLocale = Localizations.localeOf(context);
     return Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
       return Scaffold(
         backgroundColor: themeProvider.themeData.colorScheme.background,
@@ -34,8 +35,8 @@ class _ExperienceState extends State<Experience> {
                       size: 50,
                     ),
                   ),
-                  const Text(
-                    "EXPERIENCE",
+                  Text(
+                    AppLocalizations.of(context)!.experience,
                     style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 20,
@@ -98,7 +99,9 @@ class _ExperienceState extends State<Experience> {
                                     ),
                                   ),
                                   Text(
-                                    '${item['period']}',
+                                    currentLocale.languageCode == 'en'
+                                        ? '${item['periodEn']}'
+                                        : '${item['periodFr']}',
                                     style: const TextStyle(
                                       fontSize: 15,
                                       color: Colors.blueGrey,
@@ -119,7 +122,9 @@ class _ExperienceState extends State<Experience> {
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  '${item['title']}',
+                                  currentLocale.languageCode == 'en'
+                                      ? '${item['titleEn']}'
+                                      : '${item['titleFr']}',
                                   style: const TextStyle(
                                     fontSize: 16,
                                     color: Colors.black,
@@ -134,7 +139,9 @@ class _ExperienceState extends State<Experience> {
                                 padding:
                                     const EdgeInsets.only(left: 15, bottom: 20),
                                 child: Text(
-                                  '"${item['project']}"',
+                                  currentLocale.languageCode == 'en'
+                                      ? '${item['projectEn']}'
+                                      : '${item['projectFr']}',
                                   style: const TextStyle(
                                     fontSize: 15,
                                     color: Colors.black,
@@ -144,34 +151,75 @@ class _ExperienceState extends State<Experience> {
                               ),
                             ),
                             //tasks
-                            for (var t in item['tasks']) ...[
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 15, bottom: 20),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Padding(
-                                      padding: EdgeInsets.only(right: 10),
-                                      child: Icon(
-                                        Ionicons.checkmark_done_circle,
-                                        color: Colors.blueGrey,
-                                      ),
-                                    ),
-                                    Flexible(
-                                      child: Text(
-                                        '${t['task']}',
-                                        style: const TextStyle(
-                                          fontSize: 15,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
-
+                            currentLocale.languageCode == 'en'
+                                ? Column(
+                                    children: [
+                                      for (var t in item['tasksEn']) ...[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 15, bottom: 20),
+                                          child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              const Padding(
+                                                padding:
+                                                    EdgeInsets.only(right: 10),
+                                                child: Icon(
+                                                  Ionicons
+                                                      .checkmark_done_circle,
+                                                  color: Colors.blueGrey,
+                                                ),
+                                              ),
+                                              Flexible(
+                                                child: Text(
+                                                  '${t['task']}',
+                                                  style: const TextStyle(
+                                                    fontSize: 15,
+                                                    color: Colors.black,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        )
+                                      ],
+                                    ],
+                                  )
+                                : Column(
+                                    children: [
+                                      for (var t in item['tasksFr']) ...[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 15, bottom: 20),
+                                          child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              const Padding(
+                                                padding:
+                                                    EdgeInsets.only(right: 10),
+                                                child: Icon(
+                                                  Ionicons
+                                                      .checkmark_done_circle,
+                                                  color: Colors.blueGrey,
+                                                ),
+                                              ),
+                                              Flexible(
+                                                child: Text(
+                                                  '${t['task']}',
+                                                  style: const TextStyle(
+                                                    fontSize: 15,
+                                                    color: Colors.black,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        )
+                                      ],
+                                    ],
+                                  ),
                             //tags
                             Wrap(
                               children: [

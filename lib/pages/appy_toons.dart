@@ -6,6 +6,7 @@ import 'package:resume_app/theme_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../colors.dart';
 import 'config/global.params.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppyToons extends StatefulWidget {
   const AppyToons({super.key});
@@ -20,6 +21,8 @@ class _AppyToonsState extends State<AppyToons> {
   String image = "assets/art.png";
   @override
   Widget build(BuildContext context) {
+    final currentLocale = Localizations.localeOf(context);
+
     // final top = coverHeight - profileHeight / 2;
     return Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
       return Scaffold(
@@ -32,10 +35,10 @@ class _AppyToonsState extends State<AppyToons> {
                 Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.only(top: 100),
                       child: Text(
-                        "Hello, I am",
+                        AppLocalizations.of(context)!.helloIam,
                         style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 35,
@@ -50,7 +53,7 @@ class _AppyToonsState extends State<AppyToons> {
                       ),
                     ),
                     Text(
-                      "The Founder & The Artist",
+                      AppLocalizations.of(context)!.founderArtist,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 30,
@@ -58,7 +61,7 @@ class _AppyToonsState extends State<AppyToons> {
                       ),
                     ),
                     Text(
-                      "Of Appy Toons",
+                      AppLocalizations.of(context)!.appytn,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 30,
@@ -68,7 +71,7 @@ class _AppyToonsState extends State<AppyToons> {
                     Padding(
                       padding: const EdgeInsets.all(20),
                       child: Text(
-                        "swipe right for more >>",
+                        AppLocalizations.of(context)!.swipe,
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 15,
@@ -86,242 +89,246 @@ class _AppyToonsState extends State<AppyToons> {
                   ],
                 ),
                 //screen 2
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          top: 15, right: 20, left: 20, bottom: 20),
-                      child: Container(
-                        height: 250,
-                        decoration: BoxDecoration(
-                          color: Colors.white70,
-                          borderRadius: BorderRadius.circular(15.0),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.white,
-                              blurRadius: 10,
-                              // offset: Offset(4, 8), // Shadow position
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(top: 20),
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 15),
-                                    child: CircleAvatar(
-                                      backgroundImage:
-                                          AssetImage("assets/appytoons.png"),
-                                      radius: 50,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 15),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "Appy Toons",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 35,
-                                            color: themeProvider.themeData
-                                                .colorScheme.secondary,
-                                          ),
-                                        ),
-                                        Text(
-                                          "One-of-a-kind artistic products",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w300,
-                                            fontSize: 13,
-                                            color: themeProvider.themeData
-                                                .colorScheme.secondary,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  )
-                                ],
+                SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 15, right: 20, left: 20, bottom: 20),
+                        child: Container(
+                          height: 250,
+                          decoration: BoxDecoration(
+                            color: Colors.white70,
+                            borderRadius: BorderRadius.circular(15.0),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.white,
+                                blurRadius: 10,
+                                // offset: Offset(4, 8), // Shadow position
                               ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 15, bottom: 8),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  // Icon(
-                                  //   Icons.tag,
-                                  //   color: primary.shade900,
-                                  // ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(5.0),
-                                    child: CountryFlag.fromCountryCode(
-                                      'TN',
-                                      height: 20,
-                                      width: 30,
-                                      borderRadius: 5,
+                            ],
+                          ),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(top: 20),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 15),
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                            AssetImage("assets/appytoons.png"),
+                                        radius: 50,
+                                      ),
                                     ),
-                                  ),
-                                  Text(
-                                    "Made in Tunisia",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 15,
-                                        color: Colors.grey[600]),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8),
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: themeProvider
-                                      .themeData.colorScheme.background,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 15),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "Appy Toons",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 35,
+                                              color: themeProvider.themeData
+                                                  .colorScheme.secondary,
+                                            ),
+                                          ),
+                                          Text(
+                                            AppLocalizations.of(context)!
+                                                .unique,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w300,
+                                              fontSize: 13,
+                                              color: themeProvider.themeData
+                                                  .colorScheme.secondary,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
                                 ),
-                                onPressed: () async {
-                                  Uri url = Uri.parse(
-                                      "https://www.instagram.com/appy.toons/");
-
-                                  if (await canLaunchUrl(url)) {
-                                    await launchUrl(url);
-                                  } else {
-                                    throw 'Could not launch $url';
-                                  }
-                                },
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 15, bottom: 8),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    // Icon(
+                                    //   Icons.tag,
+                                    //   color: primary.shade900,
+                                    // ),
                                     Padding(
-                                      padding: const EdgeInsets.all(5),
-                                      child: Icon(
-                                        Ionicons.logo_instagram,
-                                        color: Colors.black,
+                                      padding: const EdgeInsets.all(5.0),
+                                      child: CountryFlag.fromCountryCode(
+                                        'TN',
+                                        height: 20,
+                                        width: 30,
+                                        borderRadius: 5,
                                       ),
                                     ),
                                     Text(
-                                      "appy.toons",
+                                      "Made in Tunisia",
                                       style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black,
-                                      ),
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 15,
+                                          color: Colors.grey[600]),
                                     ),
                                   ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8),
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: themeProvider
+                                        .themeData.colorScheme.background,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                  ),
+                                  onPressed: () async {
+                                    Uri url = Uri.parse(
+                                        "https://www.instagram.com/appy.toons/");
+
+                                    if (await canLaunchUrl(url)) {
+                                      await launchUrl(url);
+                                    } else {
+                                      throw 'Could not launch $url';
+                                    }
+                                  },
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(5),
+                                        child: Icon(
+                                          Ionicons.logo_instagram,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      Text(
+                                        "appy.toons",
+                                        style: TextStyle(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            right: 20, left: 20, bottom: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 10),
+                                    child: Icon(
+                                      Ionicons.heart_circle,
+                                      color: primary.shade900,
+                                      size: 35,
+                                    ),
+                                  ),
+                                  const Text(
+                                    "Description",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 20,
+                                      letterSpacing: 5,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(15.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.white54,
+                                    blurRadius: 12,
+                                    // offset: Offset(4, 8), // Shadow position
+                                  ),
+                                  BoxShadow(
+                                    color: Colors.black38,
+                                    blurRadius: 7,
+                                    // offset: Offset(4, 8), // Shadow position
+                                  ),
+                                ],
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 20, right: 20, left: 20, bottom: 20),
+                                child: RichText(
+                                  text: TextSpan(
+                                    text: AppLocalizations.of(context)!.so,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 20,
+                                      color: themeProvider
+                                          .themeData.colorScheme.secondary,
+                                      height: 1.5,
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                          text: 'Appy Toons',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.w700,
+                                              color: primary.shade900,
+                                              fontSize: 30,
+                                              height: 1.5)),
+                                      TextSpan(
+                                          text: AppLocalizations.of(context)!
+                                              .descappytn),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
                           ],
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          right: 20, left: 20, bottom: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 10),
-                                  child: Icon(
-                                    Ionicons.heart_circle,
-                                    color: primary.shade900,
-                                    size: 35,
-                                  ),
-                                ),
-                                const Text(
-                                  "Description",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 20,
-                                    letterSpacing: 5,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15.0),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.white54,
-                                  blurRadius: 12,
-                                  // offset: Offset(4, 8), // Shadow position
-                                ),
-                                BoxShadow(
-                                  color: Colors.black38,
-                                  blurRadius: 7,
-                                  // offset: Offset(4, 8), // Shadow position
-                                ),
-                              ],
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 20, right: 20, left: 20, bottom: 20),
-                              child: RichText(
-                                text: TextSpan(
-                                  text: 'So,',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 20,
-                                    color: themeProvider
-                                        .themeData.colorScheme.secondary,
-                                    height: 1.5,
-                                  ),
-                                  children: <TextSpan>[
-                                    TextSpan(
-                                        text: 'Appy Toons',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                            color: primary.shade900,
-                                            fontSize: 30,
-                                            height: 1.5)),
-                                    const TextSpan(
-                                        text:
-                                            ' is a small business that specializes in creating unique and creative digital art, paintings, stickers, and prints. Their passion for art and design shines through in every piece they create, making their products perfect for anyone looking to add some personality and flair to their home, office, or personal belongings.'),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        right: 20,
-                        left: 20,
-                      ),
-                      child: Text(
-                        "Swipe right for more >>",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 15,
-                            color: Colors.grey[600]),
-                      ),
-                    )
-                  ],
+                      Padding(
+                        padding: EdgeInsets.only(
+                          right: 20,
+                          left: 20,
+                          bottom: 20,
+                        ),
+                        child: Text(
+                          AppLocalizations.of(context)!.swipe,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 15,
+                              color: Colors.grey[600]),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
                 //screen 3
                 SingleChildScrollView(
                   child: Column(
                     children: [
                       Text(
-                        "M U S E U M",
+                        AppLocalizations.of(context)!.museum,
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w700,
@@ -344,7 +351,9 @@ class _AppyToonsState extends State<AppyToons> {
                                 bottom: 15,
                               ),
                               child: Text(
-                                item['title'],
+                                currentLocale.languageCode == 'en'
+                                    ? item['titleEn']
+                                    : item['titleFr'],
                                 style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 20,

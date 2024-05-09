@@ -7,7 +7,8 @@ import '../../colors.dart';
 class GlobalParams {
   static List<Map<String, dynamic>> skills = [
     {
-      "title": "Programming Languages \n& Framework",
+      "titleEn": "Programming Languages \n& Framework",
+      "titleFr": "Langages de Programmation \n& Technologies",
       "icon": Icon(
         Ionicons.code_working,
         color: primary.shade900,
@@ -121,7 +122,8 @@ class GlobalParams {
       ]
     },
     {
-      "title": "SGBD: \nDatabase Management System",
+      "titleEn": "SGBD: \nDatabase Management System",
+      "titleFr": "SGBD: \nSystème de gestion de base données",
       "icon": Icon(
         Ionicons.server,
         color: primary.shade900,
@@ -155,7 +157,8 @@ class GlobalParams {
       ]
     },
     {
-      "title": "IDE",
+      "titleEn": "IDE",
+      "titleFr": "IDE",
       "icon": Icon(
         Ionicons.code_slash,
         color: primary.shade900,
@@ -197,7 +200,8 @@ class GlobalParams {
       ]
     },
     {
-      "title": "Conceptual Diagrams",
+      "titleEn": "Conceptual Diagrams",
+      "titleFr": "Diagrammes Conceptuels",
       "icon": Icon(
         Ionicons.copy,
         color: primary.shade900,
@@ -223,7 +227,8 @@ class GlobalParams {
       ]
     },
     {
-      "title": "Web Design - Prototypes",
+      "titleEn": "Web Design - Prototypes",
+      "titleFr": "Web Design - Prototypes",
       "icon": Icon(
         Ionicons.brush,
         color: primary.shade900,
@@ -249,7 +254,8 @@ class GlobalParams {
       ]
     },
     {
-      "title": "Digital Art",
+      "titleEn": "Digital Art",
+      "titleFr": "L'Art Digitale",
       "icon": Icon(
         Ionicons.color_palette,
         color: primary.shade900,
@@ -275,7 +281,8 @@ class GlobalParams {
       ]
     },
     {
-      "title": "Business Intelligence",
+      "titleEn": "Business Intelligence",
+      "titleFr": "Informatique Décisionnelle",
       "icon": Icon(
         Ionicons.stats_chart,
         color: primary.shade900,
@@ -304,14 +311,18 @@ class GlobalParams {
 
   static List<Map<String, dynamic>> experiences = [
     {
-      "title": "Intern as a Graphic Designer",
-      "period": "August 2021",
+      "titleEn": "Intern as a Graphic Designer",
+      "titleFr": "Stagiaire en tant que Graphiste",
+      "periodEn": "August 2021",
+      "periodFr": "Août 2021",
       "company": {
         "name": "TeamWill Consulting Tunisia",
         "logo": "assets/logo_teamwill.png",
       },
-      "project":
+      "projectEn":
           "Participation in the organization of professional events at Teamwill.",
+      "projectFr":
+          "Participation à l'organisation d'événements professionnels chez Teamwill.",
       "tools": [
         {
           "name": "Adobe Illustrator",
@@ -322,7 +333,7 @@ class GlobalParams {
           ),
         }
       ],
-      "tasks": [
+      "tasksEn": [
         {
           "task": "Contributing to the organization of professional events.",
         },
@@ -342,17 +353,43 @@ class GlobalParams {
           "task": "Creating posts to publish on social networks.",
         },
       ],
+      "tasksFr": [
+        {
+          "task":
+              "Contribuer à la préparation des réunions de préparation des événements professionnels.",
+        },
+        {
+          "task":
+              "Participer à des réunions de préparation des événements professionnels.",
+        },
+        {
+          "task": "Développer des idées dand les réunions.",
+        },
+        {
+          "task": "Concevoir la conception des designs.",
+        },
+        {
+          "task": "Prépare des illustrations",
+        },
+        {
+          "task": "Création des publications sur les réseaux sociaux.",
+        },
+      ],
       "report": ""
     },
     {
-      "title": "Intern in Research and Development",
-      "period": "August 2022",
+      "titleEn": "Intern in Research and Development",
+      "titleFr": "Stagiaire en Recherche et Développement",
+      "periodEn": "August 2022",
+      "periodFr": "Août 2022",
       "company": {
         "name": "RunWay Tek",
         "logo": "assets/RunWayTek_logo.png",
       },
-      "project":
+      "projectEn":
           "Development of a decision making method in the case of a supermarket, based on the Apriori algorithm method and the Profset model.",
+      "projectFr":
+          "Développement d'une méthode de prise de décision dans le cas d'un supermarché, basée sur la méthode de l'algorithme Apriori et le modèle Profset.",
       "tools": [
         {
           "name": "Python",
@@ -371,7 +408,7 @@ class GlobalParams {
           ),
         }
       ],
-      "tasks": [
+      "tasksEn": [
         {
           "task":
               "Studying of the different decision making methods in the case of a supermarket previously published.",
@@ -385,17 +422,35 @@ class GlobalParams {
               "Developing the proposed method which is based on the Apriori Algorithm and Model Profset using Python.",
         },
       ],
+      "tasksFr": [
+        {
+          "task":
+              "Etudier les différentes méthodes déjà publiées de prise de décision dans les supermarchés.",
+        },
+        {
+          "task":
+              "Analyser l'article 'Analysis Of Shopping Cart In Retail Companies Using Apriori Algorithm and Model Profset' proposé by Permatasari et al.",
+        },
+        {
+          "task":
+              "Développer une méthode de prise de décision basée sur l'algorithme Apriori et le modèle Profset en utilisant Python.",
+        },
+      ],
       "report": ""
     },
     {
-      "title": "Intern as a Data analyst",
-      "period": "March 2022 - May 2022",
+      "titleEn": "Intern as a Data analyst",
+      "titleFr": "Stagiaire en tant que Analyste de Données",
+      "periodEn": "March 2022 - May 2022",
+      "periodFr": "Mars 2022 - Mai 2022",
       "company": {
         "name": "Re-searchlight Tunisia",
         "logo": "assets/re_searchlight_officiel_logo.jpg",
       },
-      "project":
+      "projectEn":
           "Analysis of user profiling and behavioral data in the medical sector.",
+      "projectFr":
+          "Analyse de profile et de données comportementales des utilisateurs dans le secteur médical.",
       "tools": [
         {
           "name": "Phantom Buster",
@@ -454,7 +509,7 @@ class GlobalParams {
           ),
         },
       ],
-      "tasks": [
+      "tasksEn": [
         {
           "task": "Studying the company needs.",
         },
@@ -471,16 +526,36 @@ class GlobalParams {
           "task": "Visualizing the results in a dashboard.",
         },
       ],
+      "tasksFr": [
+        {
+          "task": "Etudier les besoins de l'entreprise.",
+        },
+        {
+          "task": "Collecter les données des groupes de Facebook.",
+        },
+        {
+          "task": "Transformer les données en un format utilisable.",
+        },
+        {
+          "task": "Charger les résultats dans un entrepôt de données.",
+        },
+        {
+          "task": "Visualiser les données dans un dashboard.",
+        },
+      ],
       "report": ""
     },
     {
-      "title": "Intern as a Web Developer",
-      "period": "July 2023 - August 2023",
+      "titleEn": "Intern as a Web Developer",
+      "titleFr": "Stagiaire en tant que Développeuse Web",
+      "periodEn": "July 2023 - August 2023",
+      "periodFr": "Juillet 2023 - Août 2023",
       "company": {
         "name": "Sofrecom Tunisia",
         "logo": "assets/logo_sofrecom.png",
       },
-      "project": "Interviews Management Application.",
+      "projectEn": "Interviews Management Application.",
+      "projectFr": "Application de gestion des entretiens.",
       "tools": [
         {
           "name": "IntelliJ IDEA",
@@ -547,7 +622,7 @@ class GlobalParams {
           ),
         },
       ],
-      "tasks": [
+      "tasksEn": [
         {
           "task": "Studying the company needs.",
         },
@@ -558,16 +633,30 @@ class GlobalParams {
           "task": "Developping the needed interfaces",
         },
       ],
+      "tasksFr": [
+        {
+          "task": "Etudier les besoins de l'entreprise.",
+        },
+        {
+          "task": "Créer un prototype.",
+        },
+        {
+          "task": "Développer les interfaces nécessaires",
+        },
+      ],
       "report": ""
     },
     {
-      "title": "Founder & Business Owner",
-      "period": "October 2020 - Now",
+      "titleEn": "Founder & Business Owner",
+      "titleFr": "Fondatrice & propriétaire d'entreprise",
+      "periodEn": "October 2020 - Now",
+      "periodFr": "Octobre 2020 - Présent",
       "company": {
         "name": "Appy Toons",
         "logo": "assets/appytoons.png",
       },
-      "project": "The creation of art.",
+      "projectEn": "The creation of art.",
+      "projectFr": "La création de l'art.",
       "tools": [
         {
           "name": "Adobe Illustrator",
@@ -586,12 +675,20 @@ class GlobalParams {
           ),
         },
       ],
-      "tasks": [
+      "tasksEn": [
         {
           "task": "Creating arts",
         },
         {
           "task": "Being responsible of the whole business.",
+        },
+      ],
+      "tasksFr": [
+        {
+          "task": "Créer des illustrations et des peintures.",
+        },
+        {
+          "task": "Respensabiliser la gestion de l'entreprise.",
         },
       ],
       "report": ""
@@ -600,7 +697,8 @@ class GlobalParams {
 
   static List<Map<String, dynamic>> museum_art = [
     {
-      "title": "Moody the responsible rabbit",
+      "titleEn": "Moody the responsible rabbit",
+      "titleFr": "Moody le responsable lapin",
       "images": [
         {
           "image": "assets/appytoons/moody/img1.jpg",
@@ -620,7 +718,8 @@ class GlobalParams {
       ]
     },
     {
-      "title": "Halloween",
+      "titleEn": "Halloween",
+      "titleFr": "Halloween",
       "images": [
         {
           "image": "assets/appytoons/halloween/sage.jpg",
@@ -656,7 +755,8 @@ class GlobalParams {
       ]
     },
     {
-      "title": "Comics",
+      "titleEn": "Comics",
+      "titleFr": "Bandes dessinées",
       "images": [
         {
           "image": "assets/appytoons/comic/1.jpg",
@@ -673,7 +773,8 @@ class GlobalParams {
       ]
     },
     {
-      "title": "Illustrations",
+      "titleEn": "Illustrations",
+      "titleFr": "Illustrations",
       "images": [
         {
           "image": "assets/appytoons/illustrations/appy.png",
@@ -702,7 +803,8 @@ class GlobalParams {
       ]
     },
     {
-      "title": "Wallpapers",
+      "titleEn": "Wallpapers",
+      "titleFr": "Fonds d'écran",
       "images": [
         {
           "image": "assets/appytoons/wallpapers/abir.jpg",
@@ -731,7 +833,8 @@ class GlobalParams {
   static List<Map<String, dynamic>> projects = [
     {
       "title": "Mammy Restaurant",
-      "description": "A web application for a restaurant.",
+      "descriptionEn": "A web application for a restaurant.",
+      "descriptionFr": "Application web de gestion d'un restaurant.",
       "github": "https://github.com/AbirAloulou/Restaurant-management-system",
       "tools": [
         {
@@ -748,7 +851,7 @@ class GlobalParams {
         },
         {
           "name": "Visual Studio Code",
-          "image": "assets/tools/vscode.jpg",
+          "image": "assets/tools/vscode.png",
         },
         {
           "name": "Thunder Client",
@@ -760,7 +863,7 @@ class GlobalParams {
         },
         {
           "name": "Xampp",
-          "image": "assets/tools/xampp.png",
+          "image": "assets/tools/xampp.jpg",
         },
       ],
       "images": [
@@ -771,42 +874,13 @@ class GlobalParams {
         {"image": "assets/screenshots/mamy5.png"},
         {"image": "assets/screenshots/mamy6.png"},
         {"image": "assets/screenshots/mamy7.png"},
-      ]
-    },
-    {
-      "title": "Echri Tounsi",
-      "description":
-          "An ecommerce web application to buy unique and traditional tunisian products.",
-      "github": "https://github.com/AminKaammoun/Echri-Tounsi",
-      "tools": [
-        {
-          "name": "PHP",
-          "image": "assets/tools/php.png",
-        },
-        {
-          "name": "HTML 5 & CSS 3",
-          "image": "assets/tools/htmlcss.jpg",
-        },
-        {
-          "name": "Visual Studio Code",
-          "image": "assets/tools/vscode.jpg",
-        },
-        {
-          "name": "Xampp",
-          "image": "assets/tools/xampp.png",
-        },
       ],
-      "images": [
-        {"image": "assets/screenshots/echriTn1.png"},
-        {"image": "assets/screenshots/echriTn2.png"},
-        {"image": "assets/screenshots/echriTn3.png"},
-        {"image": "assets/screenshots/echriTn4.png"},
-        {"image": "assets/screenshots/echriTn5.png"},
-      ]
+      "update": "22 - 03 - 2024"
     },
     {
       "title": "To Do List",
-      "description": "A to do list mobile application.",
+      "descriptionEn": "A to do list mobile application.",
+      "descriptionFr": "Application mobile de liste des choses à faire",
       "github": "https://github.com/AbirAloulou/to-do-list---mobile-app",
       "tools": [
         {
@@ -819,12 +893,47 @@ class GlobalParams {
         },
         {
           "name": "Visual Studio Code",
-          "image": "assets/tools/vscode.jpg",
+          "image": "assets/tools/vscode.png",
         },
       ],
       "images": [
         {"image": "assets/screenshots/todo.jpg"},
-      ]
+      ],
+      "update": "22 - 03 - 2024"
+    },
+    {
+      "title": "Echri Tounsi",
+      "descriptionEn":
+          "An ecommerce web application to buy unique and traditional tunisian products.",
+      "descriptionFr":
+          "Une application web de commerce électronique pour acheter et vendre des produits tunisiens uniques et traditionnels.",
+      "github": "https://github.com/AminKaammoun/Echri-Tounsi",
+      "tools": [
+        {
+          "name": "PHP",
+          "image": "assets/tools/php.png",
+        },
+        {
+          "name": "HTML 5 ",
+          "image": "assets/tools/html.jpg",
+        },
+        {
+          "name": "Visual Studio Code",
+          "image": "assets/tools/vscode.png",
+        },
+        {
+          "name": "Xampp",
+          "image": "assets/tools/xampp.jpg",
+        },
+      ],
+      "images": [
+        {"image": "assets/screenshots/echriTn1.png"},
+        {"image": "assets/screenshots/echriTn2.png"},
+        {"image": "assets/screenshots/echriTn3.png"},
+        {"image": "assets/screenshots/echriTn4.png"},
+        {"image": "assets/screenshots/echriTn5.png"},
+      ],
+      "update": "21 - 04 - 2024"
     },
   ];
 }

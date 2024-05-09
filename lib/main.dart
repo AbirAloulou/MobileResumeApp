@@ -25,7 +25,9 @@ class MainApp extends StatefulWidget {
 }
 
 class _MainAppState extends State<MainApp> {
+  final GlobalKey<_MainAppState> mainAppStateKey = GlobalKey<_MainAppState>();
   Locale _locale = Locale('en');
+  Locale get currentLocale => _locale;
   void setLocale(Locale value) {
     setState(() {
       _locale = value;
@@ -42,6 +44,7 @@ class _MainAppState extends State<MainApp> {
           theme: themeProvider.themeData,
           supportedLocales: L10n.all,
           // locale: const Locale('en'),
+          locale: _locale,
           localizationsDelegates: const [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,

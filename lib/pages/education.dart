@@ -4,6 +4,7 @@ import 'package:animated_emoji/emojis.g.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/theme_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Education extends StatefulWidget {
   const Education({super.key});
@@ -33,8 +34,8 @@ class _EducationState extends State<Education> {
                         repeat: false,
                       ),
                     ),
-                    const Text(
-                      "EDUCATION",
+                    Text(
+                      AppLocalizations.of(context)!.edu,
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
@@ -89,8 +90,8 @@ class _EducationState extends State<Education> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Text(
-                              "Engineering Degree",
+                            Text(
+                              AppLocalizations.of(context)!.engDeg,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
@@ -99,15 +100,15 @@ class _EducationState extends State<Education> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Text(
-                              "Software Engineering",
+                            Text(
+                              AppLocalizations.of(context)!.softEng,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
                                   color: Colors.blueGrey),
                             ),
-                            const Text(
-                              "& Business Intelligence",
+                            Text(
+                              AppLocalizations.of(context)!.busInt,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
@@ -131,8 +132,8 @@ class _EducationState extends State<Education> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Text(
-                              "International Institute of Technology",
+                            Text(
+                              AppLocalizations.of(context)!.iit,
                               style: TextStyle(
                                   // fontWeight: FontWeight.bold,
                                   fontSize: 17,
@@ -141,8 +142,8 @@ class _EducationState extends State<Education> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Text(
-                              "2022 - Now ",
+                            Text(
+                              AppLocalizations.of(context)!.now,
                               style: TextStyle(
                                 fontSize: 15,
                                 color: Colors.white,
@@ -201,8 +202,8 @@ class _EducationState extends State<Education> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Text(
-                              "Bachelor's Degree",
+                            Text(
+                              AppLocalizations.of(context)!.bachDeg,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
@@ -211,15 +212,15 @@ class _EducationState extends State<Education> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Text(
-                              "Computer Science in",
+                            Text(
+                              AppLocalizations.of(context)!.compSci,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
                                   color: Colors.blueGrey),
                             ),
-                            const Text(
-                              "Data Analysis & Big Data",
+                            Text(
+                              AppLocalizations.of(context)!.dataAnBigData,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
@@ -243,15 +244,15 @@ class _EducationState extends State<Education> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Text(
-                              "Higher Institute of Computer Science",
+                            Text(
+                              AppLocalizations.of(context)!.isIM,
                               style: TextStyle(
                                   // fontWeight: FontWeight.bold,
                                   fontSize: 17,
                                   color: Colors.white),
                             ),
-                            const Text(
-                              "and Multimedia of Sfax",
+                            Text(
+                              AppLocalizations.of(context)!.isIMs,
                               style: TextStyle(
                                   // fontWeight: FontWeight.bold,
                                   fontSize: 17,
@@ -320,8 +321,8 @@ class _EducationState extends State<Education> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Text(
-                              "Baccalaureate Degree",
+                            Text(
+                              AppLocalizations.of(context)!.baccDeg,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
@@ -330,8 +331,8 @@ class _EducationState extends State<Education> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Text(
-                              "Mathematics",
+                            Text(
+                              AppLocalizations.of(context)!.maths,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
@@ -355,15 +356,8 @@ class _EducationState extends State<Education> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Text(
-                              "Mongi Slim",
-                              style: TextStyle(
-                                  // fontWeight: FontWeight.bold,
-                                  fontSize: 17,
-                                  color: Colors.white),
-                            ),
-                            const Text(
-                              "High School",
+                            Text(
+                              AppLocalizations.of(context)!.highSchool,
                               style: TextStyle(
                                   // fontWeight: FontWeight.bold,
                                   fontSize: 17,

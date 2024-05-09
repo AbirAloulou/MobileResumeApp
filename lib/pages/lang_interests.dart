@@ -4,6 +4,7 @@ import 'package:country_flags/country_flags.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/theme_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../colors.dart';
 
@@ -38,8 +39,8 @@ class _LangIntState extends State<LangInt> {
                             size: 50,
                           ),
                         ),
-                        const Text(
-                          "LANGUAGES",
+                        Text(
+                          AppLocalizations.of(context)!.langInt,
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 20,
@@ -88,7 +89,7 @@ class _LangIntState extends State<LangInt> {
                                     padding:
                                         EdgeInsets.only(left: 10, right: 10),
                                     child: Text(
-                                      "Arabic",
+                                      AppLocalizations.of(context)!.ar,
                                       style: TextStyle(
                                         fontWeight: FontWeight.w400,
                                         fontSize: 15,
@@ -98,7 +99,7 @@ class _LangIntState extends State<LangInt> {
                                     ),
                                   ),
                                   Text(
-                                    "(Native language)",
+                                    AppLocalizations.of(context)!.native,
                                     style: TextStyle(
                                         fontWeight: FontWeight.w400,
                                         fontSize: 15,
@@ -121,13 +122,14 @@ class _LangIntState extends State<LangInt> {
                                   ),
                                   Padding(
                                     padding: EdgeInsets.only(left: 10),
-                                    child: Text("French",
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 15,
-                                          color: themeProvider
-                                              .themeData.colorScheme.secondary,
-                                        )),
+                                    child:
+                                        Text(AppLocalizations.of(context)!.fr,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 15,
+                                              color: themeProvider.themeData
+                                                  .colorScheme.secondary,
+                                            )),
                                   ),
                                 ],
                               ),
@@ -143,7 +145,7 @@ class _LangIntState extends State<LangInt> {
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 10),
-                                  child: Text("English",
+                                  child: Text(AppLocalizations.of(context)!.en,
                                       style: TextStyle(
                                         fontWeight: FontWeight.w400,
                                         fontSize: 15,
@@ -176,8 +178,8 @@ class _LangIntState extends State<LangInt> {
                             size: 50,
                           ),
                         ),
-                        const Text(
-                          "INTERESTS",
+                        Text(
+                          AppLocalizations.of(context)!.interests,
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 20,
@@ -243,7 +245,7 @@ class _LangIntState extends State<LangInt> {
                                     Padding(
                                       padding: EdgeInsets.only(top: 10),
                                       child: Text(
-                                        "Painting",
+                                        AppLocalizations.of(context)!.paint,
                                         style: TextStyle(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 15,
@@ -283,7 +285,7 @@ class _LangIntState extends State<LangInt> {
                                     Padding(
                                       padding: EdgeInsets.only(top: 10),
                                       child: Text(
-                                        "Video Games",
+                                        AppLocalizations.of(context)!.vidGames,
                                         style: TextStyle(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 15,
@@ -323,7 +325,7 @@ class _LangIntState extends State<LangInt> {
                                     Padding(
                                       padding: EdgeInsets.only(top: 10),
                                       child: Text(
-                                        "Digital Art",
+                                        AppLocalizations.of(context)!.digArt,
                                         style: TextStyle(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 15,
