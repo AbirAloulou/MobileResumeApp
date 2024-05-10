@@ -43,7 +43,7 @@ class _ProjectsState extends State<Projects> {
                   ),
                 ),
               ),
-              ...(GlobalParams.projects).map((item) {
+              ...(GlobalParams.projects.reversed).map((item) {
                 return Card(
                   margin: EdgeInsets.all(10), // Add margin around the card
                   elevation: 5, // Add elevation for a shadow effect
@@ -147,6 +147,15 @@ class _ProjectsState extends State<Projects> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Center(
+                              child: Text(
+                                AppLocalizations.of(context)!.swipe,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 15,
+                                    color: Colors.grey[600]),
+                              ),
+                            ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
@@ -191,10 +200,28 @@ class _ProjectsState extends State<Projects> {
                                   scrollDirection: Axis.horizontal,
                                   children: [
                                     for (var tool in item['tools'])
-                                      CircleAvatar(
-                                        backgroundImage:
-                                            AssetImage(tool['image']),
-                                        radius: 40,
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 4),
+                                        child: Container(
+                                          width:
+                                              50, // Set width and height to maintain a square shape
+                                          height: 80,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                                12), // Adjust the border radius as needed
+                                            color: Colors.grey[
+                                                200], // Set a background color if needed
+                                          ),
+                                          child: ClipRRect(
+                                            borderRadius: BorderRadius.circular(
+                                                12), // Match the border radius of the container
+                                            child: Image.asset(
+                                              tool['image'],
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                   ],
                                 ),

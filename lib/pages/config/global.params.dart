@@ -851,15 +851,19 @@ class GlobalParams {
         },
         {
           "name": "Visual Studio Code",
-          "image": "assets/tools/vscode.png",
+          "image": "assets/tools/vscode.jpg",
         },
         {
           "name": "Thunder Client",
-          "image": "assets/tools/thundercli.png",
+          "image": "assets/tools/thundercli.jpg",
         },
         {
           "name": "Cloudinary",
           "image": "assets/tools/cloudinary.png",
+        },
+        {
+          "name": "Stripe",
+          "image": "assets/tools/stripe.png",
         },
         {
           "name": "Xampp",
@@ -885,15 +889,15 @@ class GlobalParams {
       "tools": [
         {
           "name": "Dart",
-          "image": "assets/tools/dart.png",
+          "image": "assets/tools/dart.jpg",
         },
         {
           "name": "Flutter",
-          "image": "assets/tools/flutter.png",
+          "image": "assets/tools/flutter.jpg",
         },
         {
           "name": "Visual Studio Code",
-          "image": "assets/tools/vscode.png",
+          "image": "assets/tools/vscode.jpg",
         },
       ],
       "images": [
@@ -915,11 +919,15 @@ class GlobalParams {
         },
         {
           "name": "HTML 5 ",
-          "image": "assets/tools/html.jpg",
+          "image": "assets/tools/HTML2.jpg",
+        },
+        {
+          "name": "CSS 3 ",
+          "image": "assets/tools/css.jpg",
         },
         {
           "name": "Visual Studio Code",
-          "image": "assets/tools/vscode.png",
+          "image": "assets/tools/vscode.jpg",
         },
         {
           "name": "Xampp",
@@ -934,6 +942,42 @@ class GlobalParams {
         {"image": "assets/screenshots/echriTn5.png"},
       ],
       "update": "21 - 04 - 2024"
+    },
+    {
+      "title": "Portfolio / CV Mobile",
+      "descriptionEn":
+          "My resume in a sort of portfolio developped as if a mobile application.",
+      "descriptionFr":
+          "Une application mobile qui représente mon cv comme un protfolio.",
+      "github": "https://github.com/AbirAloulou/MobileResumeApp",
+      "tools": [
+        {
+          "name": "Dart",
+          "image": "assets/tools/dart.jpg",
+        },
+        {
+          "name": "Flutter",
+          "image": "assets/tools/flutter.jpg",
+        },
+        {
+          "name": "Visual Studio Code",
+          "image": "assets/tools/vscode.jpg",
+        },
+      ],
+      "images": [
+        {"image": "assets/screenshots/resume1.jpg"},
+        {"image": "assets/screenshots/resume2.jpg"},
+        {"image": "assets/screenshots/resume3.jpg"},
+        {"image": "assets/screenshots/resume4.jpg"},
+        {"image": "assets/screenshots/resume5.jpg"},
+        {"image": "assets/screenshots/resume6.jpg"},
+        {"image": "assets/screenshots/resume7.jpg"},
+        {"image": "assets/screenshots/resume8.jpg"},
+        {"image": "assets/screenshots/resume9.jpg"},
+        {"image": "assets/screenshots/resume10.jpg"},
+        {"image": "assets/screenshots/resume11.jpg"},
+      ],
+      "update": "10 - 05 - 2024"
     },
   ];
 }
