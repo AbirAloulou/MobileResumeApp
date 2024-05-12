@@ -44,3 +44,7 @@ Technologies used in the project:
 
 *   Flutter
 *   Dart
+
+<h2>📱 Mobile specifications I used </h2>
+
+*  Display size & resolution: 6.4"   720x1560 pixels
