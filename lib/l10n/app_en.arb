@@ -1,5 +1,5 @@
 {
-  "tap": ">> Click to change the language <<",
+  "tap": ">> Click to change to French <<",
   "@tap": {
     "description": "The current language"
   },
@@ -7,7 +7,7 @@
   "@flag": {
     "description": "The current language"
   },
-  "lan": "Language",
+  "lan": "Current Language",
   "@lan": {
     "description": "The current language"
   },
@@ -121,30 +121,6 @@
   },
   "skills2": "Skills",
   "@skills2": {
-    "description": "The current language"
-  },
-  "proglang": "Programming Languages \n& Framework",
-  "@proglang": {
-    "description": "The current language"
-  },
-  "sgbd": "SGBD: \nDatabase Management System",
-  "@sgbd": {
-    "description": "The current language"
-  },
-  "diagrams": "Conceptual Diagrams",
-  "@diagrams": {
-    "description": "The current language"
-  },
-  "prototype": "Web Design - Prototypes",
-  "@prototype": {
-    "description": "The current language"
-  },
-  "digart": "Digital Art",
-  "@digart": {
-    "description": "The current language"
-  },
-  "businessIntelligence": "Business Intelligence",
-  "@businessIntelligence": {
     "description": "The current language"
   },
   "edu": "EDUCATION",

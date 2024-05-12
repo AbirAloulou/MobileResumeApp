@@ -42,16 +42,12 @@ class _LanguageState extends State<Language> {
             Center(
               child: GestureDetector(
                 onTap: () {
-                  // Get the MainApp state using its static method
                   final mainAppState = MainApp.of(context);
                   if (mainAppState != null) {
-                    // Get the current locale using the getter
                     final currentLocale = mainAppState.currentLocale;
-                    // Toggle between English and French locales
                     final newLocale = currentLocale.languageCode == 'fr'
                         ? Locale('en')
                         : Locale('fr');
-                    // Call the setLocale method of MainApp to update the locale
                     mainAppState.setLocale(newLocale);
                   }
                 },
@@ -66,7 +62,7 @@ class _LanguageState extends State<Language> {
                         color: Colors.black.withOpacity(0.3),
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
+                        offset: Offset(0, 3),
                       ),
                     ],
                   ),
@@ -80,11 +76,11 @@ class _LanguageState extends State<Language> {
                         width: 62,
                         borderRadius: 8,
                       ),
-                      SizedBox(height: 8), // Add spacing between items
+                      SizedBox(height: 8),
                       Text(
                         AppLocalizations.of(context)!.lan,
                       ),
-                      SizedBox(height: 8), // Add spacing between items
+                      SizedBox(height: 8),
                       Text(
                         AppLocalizations.of(context)!.language,
                         style: TextStyle(fontSize: 30),

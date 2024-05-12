@@ -191,6 +191,7 @@ class _AppyToonsState extends State<AppyToons> {
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20),
                                     ),
+                                    elevation: 8.0,
                                   ),
                                   onPressed: () async {
                                     Uri url = Uri.parse(

@@ -24,7 +24,6 @@ class _ContactState extends State<Contact> {
 
   @override
   Widget build(BuildContext context) {
-    final currentLocale = Localizations.localeOf(context);
     return Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
       return Scaffold(
         backgroundColor: themeProvider.themeData.colorScheme.background,
@@ -82,6 +81,8 @@ class _ContactState extends State<Contact> {
                     ],
                   ),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -96,6 +97,7 @@ class _ContactState extends State<Contact> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
+                            elevation: 8.0,
                           ),
                           onPressed: () async {
                             Uri url = Uri.parse(
@@ -150,6 +152,7 @@ class _ContactState extends State<Contact> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
+                            elevation: 8.0,
                           ),
                           onPressed: () async {
                             Uri url = Uri.parse(
@@ -204,6 +207,7 @@ class _ContactState extends State<Contact> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
+                            elevation: 8.0,
                           ),
                           onPressed: () async {
                             String phoneNumber = "+21658260160";
@@ -245,10 +249,119 @@ class _ContactState extends State<Contact> {
                           ),
                         ),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Provider.of<ThemeProvider>(context)
+                                        .themeData ==
+                                    lightMode
+                                ? themeProvider
+                                    .themeData.colorScheme.primaryContainer
+                                : themeProvider.themeData.colorScheme.secondary,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            elevation: 8.0,
+                          ),
+                          onPressed: () async {
+                            Uri url =
+                                Uri.parse("https://github.com/AbirAloulou");
+
+                            if (await canLaunchUrl(url)) {
+                              await launchUrl(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(5),
+                                child: Icon(
+                                  Ionicons.logo_github,
+                                  color: Provider.of<ThemeProvider>(context)
+                                              .themeData ==
+                                          lightMode
+                                      ? Colors.black
+                                      : Colors.white,
+                                ),
+                              ),
+                              Text(
+                                "Abir Aloulou",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w400,
+                                  color: Provider.of<ThemeProvider>(context)
+                                              .themeData ==
+                                          lightMode
+                                      ? Colors.black
+                                      : Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Provider.of<ThemeProvider>(context)
+                                        .themeData ==
+                                    lightMode
+                                ? themeProvider
+                                    .themeData.colorScheme.primaryContainer
+                                : themeProvider.themeData.colorScheme.secondary,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            elevation: 8.0,
+                          ),
+                          onPressed: () {
+                            final Uri _emailLaunchUri = Uri(
+                                scheme: 'mailto',
+                                path: 'abir_aloulou@outlook.com',
+                                queryParameters: {'subject': 'Hello!'});
+
+                            launchUrl(_emailLaunchUri);
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(5),
+                                child: Icon(
+                                  Icons.mail_rounded,
+                                  color: Provider.of<ThemeProvider>(context)
+                                              .themeData ==
+                                          lightMode
+                                      ? Colors.blue.shade700
+                                      : Colors.white,
+                                ),
+                              ),
+                              Text(
+                                "abir_aloulou@outlook.com",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w400,
+                                  color: Provider.of<ThemeProvider>(context)
+                                              .themeData ==
+                                          lightMode
+                                      ? Colors.black
+                                      : Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ),
+
               // Padding(
               //   padding: const EdgeInsets.only(top: 8),
               //   child: Text(

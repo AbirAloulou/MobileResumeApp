@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resume_app/hidden_drawer.dart';
 import 'package:provider/provider.dart';
+import 'package:resume_app/pages/hidden_drawer_fr.dart';
 import 'package:resume_app/theme_provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:resume_app/l10n/l10n.dart';
@@ -40,11 +41,12 @@ class _MainAppState extends State<MainApp> {
       builder: (context, themeProvider, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: HiddenDrawer(),
           theme: themeProvider.themeData,
           supportedLocales: L10n.all,
           // locale: const Locale('en'),
           locale: _locale,
+          home:
+              _locale.languageCode == 'fr' ? HiddenDrawerFr() : HiddenDrawer(),
           localizationsDelegates: const [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,

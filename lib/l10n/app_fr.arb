@@ -1,7 +1,7 @@
 {
-  "tap": ">> Cliquez pour changer la langue <<",
+  "tap": ">> Cliquez pour changer vers l'anglais <<",
   "flag": "FR",
-  "lan": "Langue",
+  "lan": "La Langue Actuelle",
   "language": "Français",
   "aboutME": "À propos moi",
   "helloIam": "Coucou, Je m'appelle",
